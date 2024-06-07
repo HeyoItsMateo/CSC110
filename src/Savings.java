@@ -28,11 +28,11 @@ public class Savings {
 		numMonths = input.nextInt();
 				
 		// Calculate the balanced saved
-		double monthlyInterestRate = annualInterestRate / 100 / 12; // Convert to decimal by division by 100, then to monthly rate by division by 12
-		double finalBalance = principleValue * Math.pow(1 + monthlyInterestRate, numMonths); // Calculate final balance using the formula for compound interest
+		final double MONTHLY_INTEREST_RATE = annualInterestRate / 100 / 12; // Convert to decimal by division by 100, then to monthly rate by division by 12
+		final double FINAL_BALANCE = principleValue * Math.pow(1 + MONTHLY_INTEREST_RATE, numMonths); // Calculate final balance using the formula for compound interest
 		
 		// Print the savings!
-		System.out.printf("$%.2f, saved for %d months at %.2f%% will be valued at %.2f\n", principleValue, numMonths, annualInterestRate, finalBalance);
+		System.out.printf("$%.2f, saved for %d months at %.2f%% will be valued at %.2f\n", principleValue, numMonths, annualInterestRate, FINAL_BALANCE);
 		
 		// Close the scanner object
 		input.close();
