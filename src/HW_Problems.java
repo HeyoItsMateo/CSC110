@@ -1,3 +1,4 @@
+// Testing the new github ssh key
 import java.util.Scanner;
 
 public class HW_Problems {
@@ -8,7 +9,6 @@ public class HW_Problems {
 			System.out.printf("%d ", i * 10);
 			i++;
 		}
-		
 	}
 	private static void problem_4_19(int n) {
 		double x = 0;
