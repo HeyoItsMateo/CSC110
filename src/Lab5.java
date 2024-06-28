@@ -5,7 +5,7 @@
 // Displays the input values backwards from input order,
 // and displays the sum of the array's elements.
 // FOR: CSE 110- Lab #5
-// TIME SPENT: 28
+// TIME SPENT: 28 min
 //-----------------------------------------------------------------------*/
 import java.util.Scanner;
 
