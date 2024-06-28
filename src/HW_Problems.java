@@ -1,4 +1,3 @@
-// Testing the new github ssh key
 import java.util.Scanner;
 
 public class HW_Problems {
