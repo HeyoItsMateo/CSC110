@@ -33,7 +33,7 @@ public class BrandName {
 		// Print 10 names
 		for (int i = 1; i <= 10; i++) {
 			// Random length for name, between 6 and 12
-			int nameLength = (int)(Math.random() * 7) + 6;
+			int nameLength = (int)((Math.random() * 7) + 6);
 			// Generate and print a random name
 			String name = generateName(nameLength);
 			System.out.printf("%d) %s\n", i, name);
