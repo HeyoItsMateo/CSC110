@@ -40,16 +40,16 @@ public class Lab5 {
 		// Inside this for loop, print the ith element of the array
 		// and a tab, with NO newline characters.
 			if (i != 8) {
-				System.out.printf("%f\t", arr[arrayLength - i]);
+				System.out.printf("%.3f\t", arr[arrayLength - i]);
 			}
 			else {// newline if it's the 8th element
-				System.out.printf("%f\n", arr[arrayLength - i]);
+				System.out.printf("%.3f\n", arr[arrayLength - i]);
 			}
 			// Calculate the sum of the array
 			arraySum += arr[arrayLength - i]; 
 		}
 		// Display the sum of the array
-		System.out.printf("\n The sum of the array's elements is: %f", arraySum);
+		System.out.printf("\n The sum of the array's elements is: %.3f", arraySum);
 	}
 
 }
