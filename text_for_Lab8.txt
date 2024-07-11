@@ -1,0 +1,12 @@
+This
+is
+a
+lab
+assignment
+for
+reading
+text
+from
+a
+text
+file
