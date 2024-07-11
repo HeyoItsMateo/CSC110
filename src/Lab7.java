@@ -5,7 +5,7 @@
 // prompting the user for input. Displays the elements of the array.
 // Finds the sum of each row of the array and displays it.
 // FOR: CSE 110- Lab #7
-// TIME SPENT: 12:48pm min
+// TIME SPENT: 19 min
 //-----------------------------------------------------------------------*/
 import java.util.Scanner;
 
