@@ -142,7 +142,17 @@ public class Classwork {
 		return arrDouble;
 	}
 	
-	
+	public static void swap(int a, int b)
+
+	{
+
+	   int t = a;
+
+	   a = b;
+
+	   b = t;
+
+	}
 	
 	public static void main(String[] args) {
 		// Initialize testing array
@@ -153,6 +163,13 @@ public class Classwork {
 		linearSearch(arrDouble, 10);// Fail-case
 		linearSearch(arrDouble, 7);// Success-case
 		System.out.println(Arrays.toString(removeElementAtPositionB(arrDouble,5)));
+		
+		int x = 10;
+
+		int y = 11;
+
+		swap(x, y);
+		System.out.printf("x = %d, y = %d", x, y);
 
 	}
 }
