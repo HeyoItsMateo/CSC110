@@ -88,30 +88,32 @@ public class PokerDice {
 				}
 			}
 		}
-		// Determine the type of hand based on number of pairs/
-		if ((numFirst == 2 & numSecond == 1) | (numFirst == 1 & numSecond == 2)) {
-			return 1;
-		}
-		else if (numFirst == 2 & numSecond == 2) {
-			return 2;
-		}
-		else if (numFirst == 3 | numSecond == 3) {
-			if (numSecond == 2 | numFirst == 2) {
-				return 4;
-			}
-			else {
-				return 3;
-			}
-		}
-		else if (numFirst == 4 | numSecond == 4) {
-			return 5;
-		}
-		else if (numFirst == 5 | numSecond == 5) {
-			return 6;
-		}
-		else {
-			return 0;
-		}
+		return determineHandType(numFirst, numSecond);
 	}
-
+	private static int determineHandType(int numFirst, int numSecond) {
+		// Determine the type of hand based on number of pairs/
+				if ((numFirst == 2 & numSecond == 1) | (numFirst == 1 & numSecond == 2)) {
+					return 1;
+				}
+				else if (numFirst == 2 & numSecond == 2) {
+					return 2;
+				}
+				else if (numFirst == 3 | numSecond == 3) {
+					if (numSecond == 2 | numFirst == 2) {
+						return 4;
+					}
+					else {
+						return 3;
+					}
+				}
+				else if (numFirst == 4 | numSecond == 4) {
+					return 5;
+				}
+				else if (numFirst == 5 | numSecond == 5) {
+					return 6;
+				}
+				else {
+					return 0;
+				}
+	}
 }
