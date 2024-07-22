@@ -33,31 +33,8 @@ public class PokerDice {
 			}
 
 			// Determine the type of hand (one pair, two pair, three pair, etc.)
-			String handType = getHandType(hand, handSize);
-			// Increment and store the number of hand-type for odds calculation
-			switch(handType) {
-			case "None Alike":
-				numTypes[0]++;
-				break;
-			case "One Pair":
-				numTypes[1]++;
-				break;
-			case "Two Pair":
-				numTypes[2]++;
-				break;
-			case "Three of a Kind":
-				numTypes[3]++;
-				break;
-			case "Full House":
-				numTypes[4]++;
-				break;
-			case "Four of a Kind":
-				numTypes[5]++;
-				break;
-			case "Five of a Kind":
-				numTypes[6]++;
-				break;
-			}
+			// Increment the number of hand-type for odds calculation
+			numTypes[getHandType(hand, handSize)]++;
 		}
 		
 		// Calculate the odds of each hand
@@ -76,8 +53,7 @@ public class PokerDice {
 		}
 	}
 	
-	private static String getHandType(int[] hand, int handSize) {
-		String handType = "";
+	private static int getHandType(int[] hand, int handSize) {
 		int firstPairValue = 0;
 		int secondPairValue = 0;
 		int numFirst = 1;
@@ -114,29 +90,28 @@ public class PokerDice {
 		}
 		// Determine the type of hand based on number of pairs/
 		if ((numFirst == 2 & numSecond == 1) | (numFirst == 1 & numSecond == 2)) {
-			handType = "One Pair";
+			return 1;
 		}
 		else if (numFirst == 2 & numSecond == 2) {
-			handType = "Two Pair";
+			return 2;
 		}
 		else if (numFirst == 3 | numSecond == 3) {
 			if (numSecond == 2 | numFirst == 2) {
-				handType = "Full House";
+				return 4;
 			}
 			else {
-				handType = "Three of a Kind";
+				return 3;
 			}
 		}
 		else if (numFirst == 4 | numSecond == 4) {
-			handType = "Four of a Kind";
+			return 5;
 		}
 		else if (numFirst == 5 | numSecond == 5) {
-			handType = "Five of a Kind";
+			return 6;
 		}
 		else {
-			handType = "None Alike";
+			return 0;
 		}
-		return handType;
 	}
 
 }
